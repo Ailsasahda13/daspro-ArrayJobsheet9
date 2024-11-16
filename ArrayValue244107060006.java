@@ -8,11 +8,15 @@ public class ArrayValue244107060006 {
         for (int i = 0; i < 10; i++) {
             System.out.print("Enter the final score " + i + ": ");
             finalScore[i] = sc.nextInt();
-        }
-        for (int i = 0; i < 10; i++) {
-            System.out.println("final score " + i + " is " + finalScore[i]);
 
-}
-}
-}
+        }
+        for (int i = 0; i < finalScore.length; i++) {
+            if (finalScore[i] > 70) {
+            }
+            System.out.println("Student " + i + " passed!");
+    
+            }
+        }
+    }
+
 

@@ -2,18 +2,34 @@ import java.util.Scanner;
 public class LinearSearch244107060006 {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        int[] arrayInt = {34, 18, 26, 48, 72, 20, 56, 63};
-        int key = 20;
-        int result = 0;
+        System.out.print("Enter the number of array elements: ");
+        int n = sc.nextInt();
+
+        int[] arrayInt = new int[n];
+        int key;
+        int result;
+        
+        for (int i = 0; i < arrayInt.length; i++) {
+            System.out.print("Enter the array element " + i + ": ");
+            arrayInt[i] = sc.nextInt();
+        }
+        System.out.print("Enter the key you want to search for: ");
+         key = sc.nextInt();
+
+         result = -1;
 
         for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i] == key) {
-                result = i;
-                break;
+                result = i; 
+                break; 
             }
         }
-        System.out.println("The key in the array is located at index position " + result);
+        if (result != -1) {
+            System.out.println("The key in the array is located at index position " + result);
+        } else {
+            System.out.println("key not found");
+        }
+    }
 }
-}
-
